@@ -1,0 +1,213 @@
+:root {
+  color-scheme: dark;
+  --bg: #020617;
+  --bg-soft: #050816;
+  --accent: #7c3aed;
+  --accent-soft: #a855f7;
+  --border: #1f2937;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  background: radial-gradient(circle at top, #1e1b4b 0, #020617 45%, #020617 100%);
+  color: var(--text-main);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+}
+
+.root-bg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.app-frame {
+  width: 424px;
+  max-width: 100%;
+  height: 700px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: radial-gradient(circle at top, rgba(124, 58, 237, 0.28), rgba(15, 23, 42, 0.98));
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.95);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-header {
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.95);
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.8));
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brain-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #a855f7, #4c1d95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.85);
+}
+
+.title-text {
+  flex: 1;
+}
+
+.app-name {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 18px;
+}
+
+.app-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.metrics-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.metric-pill {
+  flex: 1;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  padding: 6px 10px;
+}
+
+.metric-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.metric-unit {
+  font-size: 11px;
+  margin-left: 2px;
+  color: var(--text-muted);
+}
+
+.app-main {
+  flex: 1;
+  padding: 12px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-text {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  min-height: 18px;
+}
+
+.grid-wrapper {
+  flex: 1;
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 22px;
+  background: radial-gradient(circle at top, rgba(30, 64, 175, 0.65), rgba(15, 23, 42, 0.97));
+  border: 1px solid rgba(30, 64, 175, 0.8);
+  box-shadow: inset 0 0 40px rgba(12, 10, 42, 0.9);
+}
+
+.tile {
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.96);
+  background: radial-gradient(circle at 10% 0, #020617, #020617);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.09s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out, border-color 0.12s ease-out;
+}
+
+.tile:hover {
+  border-color: rgba(55, 65, 81, 0.9);
+}
+
+.tile-active {
+  background: radial-gradient(circle at 10% 0, #a855f7, #4c1d95);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.95);
+  border-color: rgba(196, 181, 253, 0.96);
+  transform: scale(1.04);
+}
+
+.tile:active {
+  transform: scale(0.97);
+}
+
+.bottom-panel {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.start-btn {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(to right, #7c3aed, #ec4899);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 16px 40px rgba(236, 72, 153, 0.45);
+}
+
+.start-btn:hover {
+  filter: brightness(1.06);
+}
+
+.info-line {
+  font-size: 11px;
+  color: var(--text-muted);
+}
