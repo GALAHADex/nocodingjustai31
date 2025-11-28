@@ -1,0 +1,21 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "baseBuilder": {
+    "ownerAddress": "0x0000000000000000000000000000000000000000"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Farc !!! Mind",
+    "homeUrl": "https://nocodingjustai3131.vercel.app/",
+    "iconUrl": "https://nocodingjustai3131.vercel.app/icon.png",
+    "splashImageUrl": "https://nocodingjustai3131.vercel.app/splash.png",
+    "splashBackgroundColor": "#050816",
+    "subtitle": "Fast-paced Farcaster memory game",
+    "description": "Farc !!! Mind is a Farcaster-style memory game. Watch the pattern, tap in order, and keep your streak alive!",
+    "primaryCategory": "games"
+  }
+}
